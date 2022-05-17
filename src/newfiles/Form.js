@@ -3,15 +3,15 @@ import React from "react";
 function Form({ type, card, handleChange, handleSubmit, handleCancel }) {
 
     return (
-        <form onSubmit={() => handleSubmit()}>
+        <form onSubmit={(event) => handleSubmit(event)}>
             <div className="form-group">
                 <label htmlFor="front">Front</label>
                 <textarea
                         className="form-control"
                         id="front"
                         name="front"
-                        placeholder={type === "add" && "Front side of card"}
-                        onChange={() => handleChange()}
+                        placeholder="Front side of card"
+                        onChange={(event) => handleChange(event)}
                         value={card.front}
                     >{type === "edit" && card.front}</textarea>
             </div>
@@ -21,8 +21,8 @@ function Form({ type, card, handleChange, handleSubmit, handleCancel }) {
                         className="form-control"
                         id="back"
                         name="back"
-                        placeholder={type === "add" && "Back side of card"}
-                        onChange={() => handleChange()}
+                        placeholder="Back side of card"
+                        onChange={(event) => handleChange(event)}
                         value={card.back}
                     >{type === "edit" && card.back}</textarea>
             </div>
