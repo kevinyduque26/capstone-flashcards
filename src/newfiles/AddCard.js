@@ -65,32 +65,3 @@ function AddCard() {
 }
 
 export default AddCard;
-
-/*
-        <form onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlFor="front">Front</label>
-                <textarea
-                        className="form-control"
-                        id="front"
-                        name="front"
-                        placeholder="Front side of card"
-                        onChange={handleChange}
-                        value={card.front}
-                    ></textarea>
-            </div>
-            <div className="form-group">
-                <label htmlFor="back">Back</label>
-                    <textarea
-                        className="form-control"
-                        id="back"
-                        name="back"
-                        placeholder="Back side of card"
-                        onChange={handleChange} 
-                        value={card.back}
-                    ></textarea>
-            </div>
-            <button type="button" className="btn btn-secondary mr-3" onClick={() => history.push(`/decks/${deck.id}`)}>Done</button>
-            <button type="submit" className="btn btn-primary">Save</button>
-        </form>
-*/
